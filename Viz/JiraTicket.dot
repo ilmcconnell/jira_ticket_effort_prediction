@@ -1,0 +1,28 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="Customer1 <= 0.5\ngini = 0.4595\nsamples = 1205\nvalue = [431, 774]\nclass = Hard"] ;
+1 [label="Customer2 <= 0.5\ngini = 0.4448\nsamples = 1099\nvalue = [367, 732]\nclass = Hard"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Customer3 <= 0.5\ngini = 0.4374\nsamples = 1077\nvalue = [348, 729]\nclass = Hard"] ;
+1 -> 2 ;
+3 [label="gini = 0.4309\nsamples = 1057\nvalue = [332, 725]\nclass = Hard"] ;
+2 -> 3 ;
+4 [label="gini = 0.32\nsamples = 20\nvalue = [16, 4]\nclass = Easy"] ;
+2 -> 4 ;
+5 [label="DataSource1 <= 0.5\ngini = 0.2355\nsamples = 22\nvalue = [19, 3]\nclass = Easy"] ;
+1 -> 5 ;
+6 [label="gini = 0.1723\nsamples = 21\nvalue = [19, 2]\nclass = Easy"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Hard"] ;
+5 -> 7 ;
+8 [label="DataSource2 <= 0.5\ngini = 0.4785\nsamples = 106\nvalue = [64, 42]\nclass = Easy"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="DataSource3 <= 0.5\ngini = 0.456\nsamples = 91\nvalue = [59, 32]\nclass = Easy"] ;
+8 -> 9 ;
+10 [label="gini = 0.3863\nsamples = 65\nvalue = [48, 17]\nclass = Easy"] ;
+9 -> 10 ;
+11 [label="gini = 0.4882\nsamples = 26\nvalue = [11, 15]\nclass = Hard"] ;
+9 -> 11 ;
+12 [label="gini = 0.4444\nsamples = 15\nvalue = [5, 10]\nclass = Hard"] ;
+8 -> 12 ;
+}
